@@ -44,54 +44,52 @@ export function Sidenav({ brandImg, brandName, routes }) {
       <div className="m-4 mt-0">
         {routes.map(({ layout, title, pages }, key) => { 
           return (
-            <>
-            {layout === "dashboard" &&
-            
-            <ul key={key} className="mb-4 flex flex-col gap-1 overflow-y-auto max-h-[500px]">
-            {title && (
-              <li className="mx-3.5 mt-4 mb-2">
-                <Typography
-                  variant="small"
-                  color={sidenavType === "dark" ? "white" : "blue-gray"}
-                  className="font-black uppercase opacity-75"
-                >
-                  {title}
-                </Typography>
-              </li>
-            )}
-            {pages.map(({ icon, name, path }) => (
-              <li key={name}>
-                <NavLink to={`/${layout}${path}`}>
-                  {({ isActive }) => (
-                    <Button
-                      variant={isActive ? "gradient" : "text"}
-                      color={
-                        isActive
-                          ? sidenavColor
-                          : sidenavType === "dark"
-                          ? "white"
-                          : "gray"
-                      }
-                      className="flex items-center gap-4 px-4 capitalize"
-                      fullWidth
+            <div key={key}>
+              {layout === "dashboard" &&            
+                <ul key={key} className="mb-4 flex flex-col gap-1 overflow-y-auto max-h-[500px]">
+                {title && (
+                  <li className="mx-3.5 mt-4 mb-2">
+                    <Typography
+                      variant="small"
+                      color={sidenavType === "dark" ? "white" : "blue-gray"}
+                      className="font-black uppercase opacity-75"
                     >
-                      {/* <span className="text-[#00BB7B]"> */}
-                        {icon}
-                        {/* </span> */}
-                      <Typography
-                        color="inherit"
-                        className="font-medium capitalize"
-                      >
-                        {name}
-                      </Typography>
-                    </Button>
-                  )}
-                </NavLink>
-              </li>
-            ))} 
-          </ul>
-          }
-            </>
+                      {title}
+                    </Typography>
+                  </li>
+                )}
+                {pages.map(({ icon, name, path }) => (
+  <li key={name}>
+    <NavLink key={`navlink-${name}`} to={`/${layout}${path}`}>
+      {({ isActive }) => (
+        <Button 
+          variant={isActive ? "gradient" : "text"}
+          // color={
+          //   isActive
+          //     ? sidenavColor
+          //     : sidenavType === "dark"
+          //     ? "white"
+          //     : "gray"
+          // }
+          className="flex items-center gap-4 px-4 capitalize"
+          fullWidth
+        >
+          {icon}
+          <Typography
+            color="inherit"
+            className="font-medium capitalize"
+          >
+            {name}
+          </Typography>
+        </Button>
+      )}
+    </NavLink>
+  </li>
+))}
+
+                </ul>
+              }
+            </div>
           )})}
       </div>
     </aside>
