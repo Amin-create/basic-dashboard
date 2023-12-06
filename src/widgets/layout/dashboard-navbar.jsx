@@ -31,7 +31,7 @@ export function DashboardNavbar() {
   const { fixedNavbar, openSidenav } = controller;
   const { pathname } = useLocation();
   const [layout, page] = pathname.split("/").filter((el) => el !== "");
-
+  let _link = pathname === "/dashboard/users" ? "/dashboard/users": `/${layout}`;
   return (
     <Navbar
       color={fixedNavbar ? "white" : "transparent"}
@@ -50,7 +50,7 @@ export function DashboardNavbar() {
               fixedNavbar ? "mt-1" : ""
             }`}
           >
-            <Link to={`/${layout}`}>
+            <Link to={_link}>
               <Typography
                 variant="small"
                 color="blue-gray"
@@ -103,7 +103,7 @@ export function DashboardNavbar() {
           <Menu>
             <MenuHandler>
               <IconButton variant="text" color="blue-gray">
-                <BellIcon className="h-5 w-5 text-blue-gray-500" />
+                <BellIcon className="h-5 w-5 text-green-900" />
               </IconButton>
             </MenuHandler>
             <MenuList className="w-max border-0">
@@ -183,7 +183,7 @@ export function DashboardNavbar() {
             color="blue-gray"
             onClick={() => setOpenConfigurator(dispatch, true)}
           >
-            <Cog6ToothIcon className="h-5 w-5 text-blue-gray-500" />
+            <Cog6ToothIcon className="h-5 w-5 text-orange-900" />
           </IconButton>
         </div>
       </div>

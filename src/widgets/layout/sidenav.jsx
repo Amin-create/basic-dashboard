@@ -27,13 +27,8 @@ export function Sidenav({ brandImg, brandName, routes }) {
       <div
         className={`relative`}
       >
-        <Link to="/" className="py-6 px-8 text-center">
-          <Typography
-            variant="h6"
-            color={sidenavType === "dark" ? "white" : "blue-gray"}
-          >
-            {brandName}
-          </Typography>
+        <Link to="/">
+        <img src="/img/logo/logo2.svg" height={40} width={150} className="ml-7 mt-6 mb-4" alt="" />
         </Link>
         <IconButton
           variant="text"
@@ -46,9 +41,13 @@ export function Sidenav({ brandImg, brandName, routes }) {
           <XMarkIcon strokeWidth={2.5} className="h-5 w-5 text-white" />
         </IconButton>
       </div>
-      <div className="m-4">
-        {routes.map(({ layout, title, pages }, key) => (
-          <ul key={key} className="mb-4 flex flex-col gap-1">
+      <div className="m-4 mt-0">
+        {routes.map(({ layout, title, pages }, key) => { 
+          return (
+            <>
+            {layout === "dashboard" &&
+            
+            <ul key={key} className="mb-4 flex flex-col gap-1">
             {title && (
               <li className="mx-3.5 mt-4 mb-2">
                 <Typography
@@ -71,12 +70,14 @@ export function Sidenav({ brandImg, brandName, routes }) {
                           ? sidenavColor
                           : sidenavType === "dark"
                           ? "white"
-                          : "blue-gray"
+                          : "gray"
                       }
                       className="flex items-center gap-4 px-4 capitalize"
                       fullWidth
                     >
-                      {icon}
+                      {/* <span className="text-[#00BB7B]"> */}
+                        {icon}
+                        {/* </span> */}
                       <Typography
                         color="inherit"
                         className="font-medium capitalize"
@@ -89,7 +90,9 @@ export function Sidenav({ brandImg, brandName, routes }) {
               </li>
             ))}
           </ul>
-        ))}
+          }
+            </>
+          )})}
       </div>
     </aside>
   );
@@ -97,7 +100,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
 
 Sidenav.defaultProps = {
   brandImg: "/img/logo-ct.png",
-  brandName: "Material Tailwind React",
+  brandName: "Budglt Pie",
 };
 
 Sidenav.propTypes = {

@@ -24,8 +24,8 @@ export function Notifications() {
   const alerts = ["gray", "green", "orange", "red"];
 
   return (
-    <div className="mx-auto my-20 flex max-w-screen-lg flex-col gap-8">
-      <Card>
+    <div className="mx-auto mt-5 mb-20 flex max-w-screen-l g flex-col gap-8">
+      {/* <Card>
         <CardHeader
           color="transparent"
           floated={false}
@@ -49,7 +49,7 @@ export function Notifications() {
             </Alert>
           ))}
         </CardBody>
-      </Card>
+      </Card> */}
       <Card>
         <CardHeader
           color="transparent"
@@ -58,7 +58,7 @@ export function Notifications() {
           className="m-0 p-4"
         >
           <Typography variant="h5" color="blue-gray">
-            Alerts with Icon
+            Notifications
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4 p-4">

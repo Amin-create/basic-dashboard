@@ -25,10 +25,10 @@ import { platformSettingsData, conversationsData, projectsData } from "@/data";
 export function Profile() {
   return (
     <>
-      <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url('/img/background-image.png')] bg-cover	bg-center">
+      {/* <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url('/img/background-image.png')] bg-cover	bg-center">
         <div className="absolute inset-0 h-full w-full bg-gray-900/75" />
-      </div>
-      <Card className="mx-3 -mt-16 mb-6 lg:mx-4 border border-blue-gray-100">
+      </div> */}
+      <Card className="mx- 3 mb-6 lg:mx- 4 border border-blue-gray-100 mt-5">
         <CardBody className="p-4">
           <div className="mb-10 flex items-center justify-between flex-wrap gap-6">
             <div className="flex items-center gap-6">
@@ -51,7 +51,7 @@ export function Profile() {
                 </Typography>
               </div>
             </div>
-            <div className="w-96">
+            {/* <div className="w-96">
               <Tabs value="app">
                 <TabsHeader>
                   <Tab value="app">
@@ -68,7 +68,7 @@ export function Profile() {
                   </Tab>
                 </TabsHeader>
               </Tabs>
-            </div>
+            </div> */}
           </div>
           <div className="gird-cols-1 mb-12 grid gap-12 px-4 lg:grid-cols-2 xl:grid-cols-3">
             <div>
@@ -139,7 +139,7 @@ export function Profile() {
               </ul>
             </div>
           </div>
-          <div className="px-4 pb-4">
+          {/* <div className="px-4 pb-4">
             <Typography variant="h6" color="blue-gray" className="mb-2">
               Projects
             </Typography>
@@ -211,7 +211,7 @@ export function Profile() {
                 )
               )}
             </div>
-          </div>
+          </div> */}
         </CardBody>
       </Card>
     </>
