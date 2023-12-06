@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Tailwind Dashboard React - v2.1.0
+* Budglt Pie - v1.0.0
 =========================================================
 * Product Page: https://www.creative-tim.com/product/material-tailwind-dashboard-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
