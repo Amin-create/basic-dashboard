@@ -40,7 +40,7 @@ export function Dashboard() {
             ({ layout, pages }) =>
               layout === "dashboard" &&
               pages.map(({ path, element }) => (
-                <Route key={`auth-route-${index}`} exact path={path} element={element} />
+                <Route key={`auth-route-${element}`} exact path={path} element={element} />
               ))
           )}
         </Routes>

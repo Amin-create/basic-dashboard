@@ -92,9 +92,9 @@ export function Configurator() {
             Sidenav Colors
           </Typography>
           <div className="mt-3 flex items-center gap-2">
-            {Object.keys(sidenavColors).map((color) => (
+            {Object.keys(sidenavColors).map((color,index) => (
               <span
-                key={color}
+                key={index*6}
                 className={`h-6 w-6 cursor-pointer rounded-full border bg-gradient-to-br transition-transform hover:scale-105 ${
                   sidenavColors[color]
                 } ${

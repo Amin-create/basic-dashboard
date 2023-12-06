@@ -62,9 +62,9 @@ export function Notifications() {
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4 p-4">
-          {alerts.map((color) => (
+          {alerts.map((color,index) => (
             <Alert
-              key={color}
+              key={index*6}
               open={showAlertsWithIcon[color]}
               color={color}
               icon={
