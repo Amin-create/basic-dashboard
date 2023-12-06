@@ -47,7 +47,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
             <>
             {layout === "dashboard" &&
             
-            <ul key={key} className="mb-4 flex flex-col gap-1">
+            <ul key={key} className="mb-4 flex flex-col gap-1 overflow-y-auto max-h-[500px]">
             {title && (
               <li className="mx-3.5 mt-4 mb-2">
                 <Typography
@@ -88,7 +88,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
                   )}
                 </NavLink>
               </li>
-            ))}
+            ))} 
           </ul>
           }
             </>
