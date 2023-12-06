@@ -19,7 +19,6 @@ export function Users() {
           <Typography variant="h6" color="white">
             Users
           </Typography>
-
           
         </CardHeader>
         <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
